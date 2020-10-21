@@ -19,6 +19,9 @@
 		E54BA6EC25403E79008112F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E54BA6EA25403E79008112F3 /* LaunchScreen.storyboard */; };
 		E54BA6F725403E7A008112F3 /* Cinema_JournalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54BA6F625403E7A008112F3 /* Cinema_JournalTests.swift */; };
 		E54BA70225403E7A008112F3 /* Cinema_JournalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54BA70125403E7A008112F3 /* Cinema_JournalUITests.swift */; };
+		E553616B25409518000539F7 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = E553616A25409518000539F7 /* File.swift */; };
+		E5775906254076A6009D9C40 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5775905254076A6009D9C40 /* Networking.swift */; };
+		E577590E25407B17009D9C40 /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = E577590D25407B17009D9C40 /* K.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +65,9 @@
 		E54BA6FD25403E7A008112F3 /* Cinema JournalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cinema JournalUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E54BA70125403E7A008112F3 /* Cinema_JournalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cinema_JournalUITests.swift; sourceTree = "<group>"; };
 		E54BA70325403E7A008112F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E553616A25409518000539F7 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		E5775905254076A6009D9C40 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		E577590D25407B17009D9C40 /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
 		EC75029D07D0D0F60B96A748 /* Pods_Cinema_Journal_Cinema_JournalUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cinema_Journal_Cinema_JournalUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -113,7 +119,6 @@
 				2F52C059A3AEBF488BA18E88 /* Pods-Cinema JournalTests.debug.xcconfig */,
 				C6CDE9AA08C056DEF198DC78 /* Pods-Cinema JournalTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -144,12 +149,14 @@
 			children = (
 				E54BA6DC25403E76008112F3 /* AppDelegate.swift */,
 				E54BA6DE25403E76008112F3 /* SceneDelegate.swift */,
-				E54BA6E025403E76008112F3 /* ViewController.swift */,
-				E54BA6E225403E76008112F3 /* Main.storyboard */,
+				E577590425407676009D9C40 /* Model */,
+				E57758FE2540764E009D9C40 /* View */,
+				E57758FF2540765A009D9C40 /* Controller */,
 				E54BA6E825403E79008112F3 /* Assets.xcassets */,
 				E54BA6EA25403E79008112F3 /* LaunchScreen.storyboard */,
 				E54BA6ED25403E79008112F3 /* Info.plist */,
 				E54BA6E525403E76008112F3 /* Cinema_Journal.xcdatamodeld */,
+				E577590D25407B17009D9C40 /* K.swift */,
 			);
 			path = "Cinema Journal";
 			sourceTree = "<group>";
@@ -170,6 +177,31 @@
 				E54BA70325403E7A008112F3 /* Info.plist */,
 			);
 			path = "Cinema JournalUITests";
+			sourceTree = "<group>";
+		};
+		E57758FE2540764E009D9C40 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E54BA6E225403E76008112F3 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E57758FF2540765A009D9C40 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E54BA6E025403E76008112F3 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E577590425407676009D9C40 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E5775905254076A6009D9C40 /* Networking.swift */,
+				E553616A25409518000539F7 /* File.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -375,9 +407,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E54BA6E125403E76008112F3 /* ViewController.swift in Sources */,
+				E5775906254076A6009D9C40 /* Networking.swift in Sources */,
+				E553616B25409518000539F7 /* File.swift in Sources */,
 				E54BA6DD25403E76008112F3 /* AppDelegate.swift in Sources */,
 				E54BA6E725403E76008112F3 /* Cinema_Journal.xcdatamodeld in Sources */,
 				E54BA6DF25403E76008112F3 /* SceneDelegate.swift in Sources */,
+				E577590E25407B17009D9C40 /* K.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
