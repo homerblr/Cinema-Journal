@@ -9,33 +9,31 @@ import Foundation
 
 struct Networking {
     
-    static func fetchData() {
+    static func fetchData<T>(_ request : APITarget, _ modelType : T.Type) where T: Codable {
         //Create composed URL
         var urlComponents = URLComponents()
-        urlComponents.scheme = "https"
-        urlComponents.host = "api.themoviedb.org"
-        urlComponents.path = "/3/discover/movie"
-        urlComponents.queryItems = [
-            URLQueryItem(name: "api_key", value: Constants.API.APIkey)
-        ]
-        guard let url = URL(string: urlComponents.url!.absoluteString) else { return }
+        urlComponents.scheme = request.scheme
+        urlComponents.host = request.host
+        urlComponents.path = request.path
+        urlComponents.queryItems = request.queryItems
+        
+        guard let stringURL = urlComponents.url?.absoluteString,
+              let url = URL(string: stringURL) else { return }
         
         //Networking
         let session = URLSession.shared
         session.dataTask(with: url) { (data, response, error) in
-            guard let data = data, let response = response else {return}
+            guard let data = data, let response = response else { return }
             do {
-                let jsonData = try JSONDecoder().decode(MainData.self, from: data)
-                print(jsonData.results[5].title)
+                let jsonData = try JSONDecoder().decode(T.self, from: data)
+                dump(jsonData)
             } catch {
                 print(error)
             }
-//            print(response)
             if let e = error {
                 print(e)
             }
-        }
-        .resume()
+        }.resume()
     }
 }
 

@@ -9,14 +9,14 @@ import Foundation
 
 struct MainData : Codable {
     let page, totalResults, totalPages: Int
-      let results: [MovieDetails]
-
-      enum CodingKeys: String, CodingKey {
-          case page
-          case totalResults = "total_results"
-          case totalPages = "total_pages"
-          case results
-      }
+    let results: [MovieDetails]
+    
+    enum CodingKeys: String, CodingKey {
+        case page
+        case totalResults = "total_results"
+        case totalPages = "total_pages"
+        case results
+    }
 }
 
 // MARK: - MovieDetails
@@ -34,7 +34,7 @@ struct MovieDetails: Codable {
     let title: String
     let voteAverage: Double
     let overview, releaseDate: String
-
+    
     enum CodingKeys: String, CodingKey {
         case popularity
         case voteCount = "vote_count"

@@ -20,6 +20,8 @@
 		E54BA6F725403E7A008112F3 /* Cinema_JournalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54BA6F625403E7A008112F3 /* Cinema_JournalTests.swift */; };
 		E54BA70225403E7A008112F3 /* Cinema_JournalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54BA70125403E7A008112F3 /* Cinema_JournalUITests.swift */; };
 		E55361762540AE36000539F7 /* MainData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55361752540AE36000539F7 /* MainData.swift */; };
+		E553617E2541C6FD000539F7 /* TVShowsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E553617D2541C6FD000539F7 /* TVShowsResponse.swift */; };
+		E55361832541D0A9000539F7 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55361822541D0A9000539F7 /* API.swift */; };
 		E5775906254076A6009D9C40 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5775905254076A6009D9C40 /* Networking.swift */; };
 		E577590E25407B17009D9C40 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E577590D25407B17009D9C40 /* Constants.swift */; };
 /* End PBXBuildFile section */
@@ -66,6 +68,8 @@
 		E54BA70125403E7A008112F3 /* Cinema_JournalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cinema_JournalUITests.swift; sourceTree = "<group>"; };
 		E54BA70325403E7A008112F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E55361752540AE36000539F7 /* MainData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainData.swift; sourceTree = "<group>"; };
+		E553617D2541C6FD000539F7 /* TVShowsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowsResponse.swift; sourceTree = "<group>"; };
+		E55361822541D0A9000539F7 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		E5775905254076A6009D9C40 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		E577590D25407B17009D9C40 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EC75029D07D0D0F60B96A748 /* Pods_Cinema_Journal_Cinema_JournalUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cinema_Journal_Cinema_JournalUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -199,6 +203,8 @@
 			isa = PBXGroup;
 			children = (
 				E5775905254076A6009D9C40 /* Networking.swift */,
+				E55361822541D0A9000539F7 /* API.swift */,
+				E553617D2541C6FD000539F7 /* TVShowsResponse.swift */,
 				E55361752540AE36000539F7 /* MainData.swift */,
 			);
 			path = Model;
@@ -411,7 +417,9 @@
 				E54BA6DD25403E76008112F3 /* AppDelegate.swift in Sources */,
 				E55361762540AE36000539F7 /* MainData.swift in Sources */,
 				E54BA6E725403E76008112F3 /* Cinema_Journal.xcdatamodeld in Sources */,
+				E553617E2541C6FD000539F7 /* TVShowsResponse.swift in Sources */,
 				E54BA6DF25403E76008112F3 /* SceneDelegate.swift in Sources */,
+				E55361832541D0A9000539F7 /* API.swift in Sources */,
 				E577590E25407B17009D9C40 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
