@@ -203,9 +203,9 @@
 			isa = PBXGroup;
 			children = (
 				E5775905254076A6009D9C40 /* Networking.swift */,
+				E55361752540AE36000539F7 /* MainData.swift */,
 				E55361822541D0A9000539F7 /* API.swift */,
 				E553617D2541C6FD000539F7 /* TVShowsResponse.swift */,
-				E55361752540AE36000539F7 /* MainData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";

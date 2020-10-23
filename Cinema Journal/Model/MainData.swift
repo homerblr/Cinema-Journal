@@ -19,7 +19,6 @@ struct MainData : Codable {
     }
 }
 
-// MARK: - MovieDetails
 struct MovieDetails: Codable {
     let popularity: Double
     let voteCount: Int

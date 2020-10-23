@@ -8,7 +8,6 @@
 import Foundation
 
 
-// MARK: - Welcome
 struct TVShowsResponse: Codable {
     let page, totalResults, totalPages: Int
     let results: [TVShowsResult]
@@ -21,7 +20,6 @@ struct TVShowsResponse: Codable {
     }
 }
 
-// MARK: - Result
 struct TVShowsResult: Codable {
     let originalName: String
     let genreIDS: [Int]

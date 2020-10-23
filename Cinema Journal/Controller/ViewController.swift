@@ -11,8 +11,12 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        Networking.fetchData(MovieAPITarget.movies, MainData.self)
-        Networking.fetchData(TVShowsAPI.discover, TVShowsResponse.self)
+        
+        Networking.fetchData(MovieAPITarget.movies, MainData.self) { (json, error) in
+            print(json ?? "can't parse data")
+            
+        }
+//        Networking.fetchData(TVShowsAPI.discover, TVShowsResponse.self)
     }
 }
 
