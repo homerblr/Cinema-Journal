@@ -9,7 +9,7 @@ import Foundation
 
 struct Networking {
     
-    static func fetchData<T>(_ request : APITarget, _ modelType : T.Type, completionHandler : @escaping ([String : Any]?, Error?) -> Void) where T: Codable {
+    static func fetchData<T>(_ request : APITarget, _ modelType : T.Type, completionHandler : @escaping (T?, Error?) -> Void) where T: Codable {
         //Create composed URL
         var urlComponents = URLComponents()
         urlComponents.scheme = request.scheme
@@ -26,7 +26,7 @@ struct Networking {
             guard let data = data, let response = response else { return }
             do {
                 let jsonData = try JSONDecoder().decode(T.self, from: data)
-                completionHandler(jsonData as? [String : Any], nil)
+                completionHandler(jsonData, nil)
             } catch {
                 completionHandler(nil, error)
             }
