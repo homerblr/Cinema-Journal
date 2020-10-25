@@ -24,6 +24,9 @@
 		E55361832541D0A9000539F7 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55361822541D0A9000539F7 /* API.swift */; };
 		E5775906254076A6009D9C40 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5775905254076A6009D9C40 /* Networking.swift */; };
 		E577590E25407B17009D9C40 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E577590D25407B17009D9C40 /* Constants.swift */; };
+		E5E915622545998D00EAA6BA /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E915612545998D00EAA6BA /* SettingsVC.swift */; };
+		E5E9156A25459B0800EAA6BA /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E9156925459B0800EAA6BA /* TabBarController.swift */; };
+		E5E9156F25459B3200EAA6BA /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E9156E25459B3200EAA6BA /* Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +75,9 @@
 		E55361822541D0A9000539F7 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		E5775905254076A6009D9C40 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		E577590D25407B17009D9C40 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E5E915612545998D00EAA6BA /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsVC.swift; path = "Cinema Journal/Controller/SettingsVC.swift"; sourceTree = SOURCE_ROOT; };
+		E5E9156925459B0800EAA6BA /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TabBarController.swift; path = "Cinema Journal/Controller/TabBarController.swift"; sourceTree = SOURCE_ROOT; };
+		E5E9156E25459B3200EAA6BA /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		EC75029D07D0D0F60B96A748 /* Pods_Cinema_Journal_Cinema_JournalUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cinema_Journal_Cinema_JournalUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -160,7 +166,7 @@
 				E54BA6EA25403E79008112F3 /* LaunchScreen.storyboard */,
 				E54BA6ED25403E79008112F3 /* Info.plist */,
 				E54BA6E525403E76008112F3 /* Cinema_Journal.xcdatamodeld */,
-				E577590D25407B17009D9C40 /* Constants.swift */,
+				E5E9157325459B3700EAA6BA /* Helpers */,
 			);
 			path = "Cinema Journal";
 			sourceTree = "<group>";
@@ -194,6 +200,8 @@
 		E57758FF2540765A009D9C40 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E5E9156925459B0800EAA6BA /* TabBarController.swift */,
+				E5E915612545998D00EAA6BA /* SettingsVC.swift */,
 				E54BA6E025403E76008112F3 /* ViewController.swift */,
 			);
 			path = Controller;
@@ -208,6 +216,15 @@
 				E553617D2541C6FD000539F7 /* TVShowsResponse.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		E5E9157325459B3700EAA6BA /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E577590D25407B17009D9C40 /* Constants.swift */,
+				E5E9156E25459B3200EAA6BA /* Colors.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -413,7 +430,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E54BA6E125403E76008112F3 /* ViewController.swift in Sources */,
+				E5E9156F25459B3200EAA6BA /* Colors.swift in Sources */,
 				E5775906254076A6009D9C40 /* Networking.swift in Sources */,
+				E5E9156A25459B0800EAA6BA /* TabBarController.swift in Sources */,
 				E54BA6DD25403E76008112F3 /* AppDelegate.swift in Sources */,
 				E55361762540AE36000539F7 /* MainData.swift in Sources */,
 				E54BA6E725403E76008112F3 /* Cinema_Journal.xcdatamodeld in Sources */,
@@ -421,6 +440,7 @@
 				E54BA6DF25403E76008112F3 /* SceneDelegate.swift in Sources */,
 				E55361832541D0A9000539F7 /* API.swift in Sources */,
 				E577590E25407B17009D9C40 /* Constants.swift in Sources */,
+				E5E915622545998D00EAA6BA /* SettingsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
