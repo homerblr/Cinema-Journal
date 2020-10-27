@@ -9,10 +9,12 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        tableView.register(UINib(nibName: MovieCellTableViewCell.nibName, bundle: nil), forCellReuseIdentifier: MovieCellTableViewCell.cellIdentifier)
         
         Networking.fetchData(MovieAPITarget.movies, MainData.self) { (result) in
             switch result {
@@ -20,12 +22,28 @@ class ViewController: UIViewController {
                 print(movieData.results)
             case .failure(let err) :
                 print(err)
-                
             }
         }
-        
     }
-    //        Networking.fetchData(TVShowsAPI.discover, TVShowsResponse.self)
+   
+    
 }
+
+
+extension ViewController : UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 100
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: MovieCellTableViewCell.cellIdentifier, for: indexPath) as! MovieCellTableViewCell
+        return cell
+    }
+    
+    
+}
+
+
+
 
 

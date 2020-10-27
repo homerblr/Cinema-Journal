@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -31,14 +32,33 @@
                     <view key="view" contentMode="scaleToFill" id="odS-X6-d8d">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3Uc-Ux-T1a">
+                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="yMP-sJ-tLZ" id="Xfv-PD-ITi"/>
+                                    <outlet property="delegate" destination="yMP-sJ-tLZ" id="98C-sD-gfk"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="i8B-gN-IY7"/>
                         <color key="backgroundColor" name="backgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3Uc-Ux-T1a" firstAttribute="bottom" secondItem="i8B-gN-IY7" secondAttribute="bottom" id="CED-6b-sCg"/>
+                            <constraint firstItem="3Uc-Ux-T1a" firstAttribute="top" secondItem="i8B-gN-IY7" secondAttribute="top" id="JGP-Dw-6ow"/>
+                            <constraint firstItem="3Uc-Ux-T1a" firstAttribute="leading" secondItem="i8B-gN-IY7" secondAttribute="leading" id="dHz-aQ-fEY"/>
+                            <constraint firstItem="3Uc-Ux-T1a" firstAttribute="trailing" secondItem="i8B-gN-IY7" secondAttribute="trailing" id="jQo-2s-weM"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Movies" id="ACF-or-uPp"/>
+                    <connections>
+                        <outlet property="tableView" destination="3Uc-Ux-T1a" id="0lp-GX-xF8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JMG-8J-HS3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2068.1159420289855" y="-123.21428571428571"/>
+            <point key="canvasLocation" x="2066.666666666667" y="-123.21428571428571"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ZEJ-rh-xwW">
@@ -103,5 +123,8 @@
         <namedColor name="backgroundColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

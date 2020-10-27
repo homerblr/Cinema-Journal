@@ -24,6 +24,8 @@
 		E55361832541D0A9000539F7 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55361822541D0A9000539F7 /* API.swift */; };
 		E5775906254076A6009D9C40 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5775905254076A6009D9C40 /* Networking.swift */; };
 		E577590E25407B17009D9C40 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E577590D25407B17009D9C40 /* Constants.swift */; };
+		E586E44325483AE700926804 /* MovieCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E586E44125483AE700926804 /* MovieCellTableViewCell.swift */; };
+		E586E44425483AE700926804 /* MovieCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E586E44225483AE700926804 /* MovieCellTableViewCell.xib */; };
 		E5E915622545998D00EAA6BA /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E915612545998D00EAA6BA /* SettingsVC.swift */; };
 		E5E9156A25459B0800EAA6BA /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E9156925459B0800EAA6BA /* TabBarController.swift */; };
 		E5E9156F25459B3200EAA6BA /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E9156E25459B3200EAA6BA /* Colors.swift */; };
@@ -75,6 +77,8 @@
 		E55361822541D0A9000539F7 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		E5775905254076A6009D9C40 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		E577590D25407B17009D9C40 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E586E44125483AE700926804 /* MovieCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCellTableViewCell.swift; sourceTree = "<group>"; };
+		E586E44225483AE700926804 /* MovieCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCellTableViewCell.xib; sourceTree = "<group>"; };
 		E5E915612545998D00EAA6BA /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsVC.swift; path = "Cinema Journal/Controller/SettingsVC.swift"; sourceTree = SOURCE_ROOT; };
 		E5E9156925459B0800EAA6BA /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TabBarController.swift; path = "Cinema Journal/Controller/TabBarController.swift"; sourceTree = SOURCE_ROOT; };
 		E5E9156E25459B3200EAA6BA /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
@@ -193,6 +197,8 @@
 			isa = PBXGroup;
 			children = (
 				E54BA6E225403E76008112F3 /* Main.storyboard */,
+				E586E44125483AE700926804 /* MovieCellTableViewCell.swift */,
+				E586E44225483AE700926804 /* MovieCellTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -335,6 +341,7 @@
 			files = (
 				E54BA6EC25403E79008112F3 /* LaunchScreen.storyboard in Resources */,
 				E54BA6E925403E79008112F3 /* Assets.xcassets in Resources */,
+				E586E44425483AE700926804 /* MovieCellTableViewCell.xib in Resources */,
 				E54BA6E425403E76008112F3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -429,6 +436,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E586E44325483AE700926804 /* MovieCellTableViewCell.swift in Sources */,
 				E54BA6E125403E76008112F3 /* ViewController.swift in Sources */,
 				E5E9156F25459B3200EAA6BA /* Colors.swift in Sources */,
 				E5775906254076A6009D9C40 /* Networking.swift in Sources */,

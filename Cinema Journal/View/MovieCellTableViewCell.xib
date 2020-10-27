@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="movieCell" id="KGk-i7-Jjw" customClass="MovieCellTableViewCell" customModule="Cinema_Journal" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="poster" translatesAutoresizingMaskIntoConstraints="NO" id="m9I-Fo-ePC">
+                        <rect key="frame" x="16" y="8" width="72" height="104"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="104" id="Hds-m5-6JO"/>
+                            <constraint firstAttribute="width" constant="72" id="rxg-Rf-f8h"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2020 | Comedy" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3TV-TK-gbf">
+                        <rect key="frame" x="104" y="13" width="255" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Borat Subsequent Moviefilm" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rao-YV-eFO">
+                        <rect key="frame" x="104" y="31" width="255" height="14"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Best movie 2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xom-9Z-DFh">
+                        <rect key="frame" x="104" y="63" width="235" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="CKh-h8-2Df">
+                        <rect key="frame" x="104" y="85" width="15" height="14"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6,9" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XCl-hq-tGn">
+                        <rect key="frame" x="127" y="84" width="22" height="17"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="m9I-Fo-ePC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="0Dj-5K-vJe"/>
+                    <constraint firstAttribute="bottom" secondItem="m9I-Fo-ePC" secondAttribute="bottom" constant="24" id="3eP-6G-ULH"/>
+                    <constraint firstItem="Rao-YV-eFO" firstAttribute="leading" secondItem="Xom-9Z-DFh" secondAttribute="leading" id="8R6-I7-37R"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="XCl-hq-tGn" secondAttribute="bottom" constant="28" id="9br-6l-6r4"/>
+                    <constraint firstItem="Xom-9Z-DFh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="52" id="CSu-Lg-AGT"/>
+                    <constraint firstAttribute="trailing" secondItem="Rao-YV-eFO" secondAttribute="trailing" constant="16" id="GY9-s8-h3v"/>
+                    <constraint firstItem="m9I-Fo-ePC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="O3H-2v-DX2"/>
+                    <constraint firstItem="Xom-9Z-DFh" firstAttribute="top" secondItem="Rao-YV-eFO" secondAttribute="bottom" constant="18" id="Pqz-Fg-Tc6"/>
+                    <constraint firstAttribute="trailing" secondItem="m9I-Fo-ePC" secondAttribute="trailing" constant="287" id="Ruf-Ig-WcB"/>
+                    <constraint firstAttribute="trailing" secondItem="3TV-TK-gbf" secondAttribute="trailing" constant="16" id="Tvk-Ag-9Pv"/>
+                    <constraint firstItem="XCl-hq-tGn" firstAttribute="leading" secondItem="CKh-h8-2Df" secondAttribute="trailing" constant="8" id="WV4-Ir-PMA"/>
+                    <constraint firstItem="3TV-TK-gbf" firstAttribute="leading" secondItem="m9I-Fo-ePC" secondAttribute="trailing" constant="16" id="avU-JE-o3L"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Xom-9Z-DFh" secondAttribute="trailing" constant="16" id="bZ9-ew-haT"/>
+                    <constraint firstItem="Rao-YV-eFO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="31" id="cq7-9D-Lor"/>
+                    <constraint firstItem="CKh-h8-2Df" firstAttribute="leading" secondItem="m9I-Fo-ePC" secondAttribute="trailing" constant="16" id="dIk-OF-F24"/>
+                    <constraint firstItem="3TV-TK-gbf" firstAttribute="leading" secondItem="Rao-YV-eFO" secondAttribute="leading" id="eau-Kq-ctV"/>
+                    <constraint firstItem="CKh-h8-2Df" firstAttribute="top" secondItem="Xom-9Z-DFh" secondAttribute="bottom" constant="5" id="fyW-yn-AsH"/>
+                    <constraint firstItem="Rao-YV-eFO" firstAttribute="top" secondItem="3TV-TK-gbf" secondAttribute="bottom" constant="3.5" id="lDX-Vy-XVU"/>
+                    <constraint firstItem="3TV-TK-gbf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="13" id="mf0-wM-0Ig"/>
+                    <constraint firstItem="XCl-hq-tGn" firstAttribute="top" secondItem="Xom-9Z-DFh" secondAttribute="bottom" constant="4" id="vKL-uE-kp3"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="CKh-h8-2Df" secondAttribute="bottom" constant="30" id="xOT-qJ-Nqj"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="movieDescription" destination="Xom-9Z-DFh" id="Gfv-UJ-0c2"/>
+                <outlet property="movieRate" destination="XCl-hq-tGn" id="dFR-Yz-SF2"/>
+                <outlet property="movieTitle" destination="Rao-YV-eFO" id="UND-SY-vsV"/>
+                <outlet property="posterImage" destination="m9I-Fo-ePC" id="wvD-aD-Iha"/>
+                <outlet property="starImageView" destination="CKh-h8-2Df" id="sNq-XH-yug"/>
+                <outlet property="yearAndGenre" destination="3TV-TK-gbf" id="8LV-Eb-fZq"/>
+            </connections>
+            <point key="canvasLocation" x="103.62318840579711" y="162.72321428571428"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="poster" width="73" height="104"/>
+        <image name="star" width="15" height="13"/>
+    </resources>
+</document>
