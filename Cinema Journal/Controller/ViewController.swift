@@ -15,6 +15,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         tableView.register(UINib(nibName: MovieCellTableViewCell.nibName, bundle: nil), forCellReuseIdentifier: MovieCellTableViewCell.cellIdentifier)
+        tableView.estimatedRowHeight = 136
         
         Networking.fetchData(MovieAPITarget.movies, MainData.self) { (result) in
             switch result {
