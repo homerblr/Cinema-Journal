@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class MovieCellTableViewCell: UITableViewCell {
     
@@ -23,7 +24,7 @@ class MovieCellTableViewCell: UITableViewCell {
         super.awakeFromNib()
         posterImage.layer.cornerRadius = 6
         posterImage.layer.masksToBounds = true
-        
+       
         
     }
     
@@ -37,7 +38,9 @@ class MovieCellTableViewCell: UITableViewCell {
         }
         let year = model.releaseDate.dropLast(6)
         yearAndGenre.text = String(year) // need to add genre in a single string
+        posterImage.kf.setImage(with: URL(string: Constants.API.posterURL + model.posterPath))
     }
+    
     
     func numberFormat (_ num : Double) -> String? {
         let formatter = NumberFormatter()
@@ -52,5 +55,7 @@ class MovieCellTableViewCell: UITableViewCell {
         
         // Configure the view for the selected state
     }
+    
+    
     
 }
