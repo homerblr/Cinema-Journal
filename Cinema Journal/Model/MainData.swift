@@ -7,6 +7,7 @@
 
 import Foundation
 
+
 struct MainData : Codable {
     let page, totalResults, totalPages: Int
     let results: [MovieDetails]
