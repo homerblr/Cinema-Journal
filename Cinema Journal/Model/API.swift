@@ -29,6 +29,7 @@ extension APITarget {
 
 enum MovieAPITarget {
     case movies
+    case genres
 }
 
 enum TVShowsAPI {
@@ -53,12 +54,14 @@ extension MovieAPITarget: APITarget {
     var path: String {
         switch self {
         case .movies: return "/3/discover/movie"
+        case .genres: return "/3/genre/movie/list"
         }
     }
     
     var method: Method {
         switch self {
         case .movies: return .get
+        case .genres: return .get
         }
     }
 }
