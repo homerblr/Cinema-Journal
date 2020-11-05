@@ -211,9 +211,9 @@
 		E57758FF2540765A009D9C40 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E54BA6E025403E76008112F3 /* ViewController.swift */,
 				E5E9156925459B0800EAA6BA /* TabBarController.swift */,
 				E5E915612545998D00EAA6BA /* SettingsVC.swift */,
-				E54BA6E025403E76008112F3 /* ViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
