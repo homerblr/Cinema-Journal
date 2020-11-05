@@ -6,4 +6,6 @@
   
 */
 "no_ratings" = "No ratings yet";
+"network_error_title" = "Network error";
+"fetch_failure" = "There was a problem with your internet connection, check network condition";
 

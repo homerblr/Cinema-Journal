@@ -29,14 +29,19 @@ class ViewController: UIViewController {
                 GenreController.shared.fetchGenres { (success) in
                     DispatchQueue.main.async {
                         self.tableView.reloadData()
+                        
                     }
+                    
                 }
             case .failure(let err) :
-                print(err)
+                DispatchQueue.main.async {
+                    self.showAlert()
+                    print(err)
+                }
             }
         }
     }
-
+    
 }
 
 //-MARK: TableView extensions
@@ -54,7 +59,13 @@ extension ViewController : UITableViewDataSource {
         return cell
     }
     
-    
+    //MARK: - UIAlert
+    func showAlert() {
+        let ac = UIAlertController(title: NSLocalizedString("network_error_title", comment: ""), message: NSLocalizedString("fetch_failure", comment: ""), preferredStyle: .alert)
+        let okButton = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+        ac.addAction(okButton)
+        present(ac, animated: true, completion: nil)
+    }
 }
 
 
