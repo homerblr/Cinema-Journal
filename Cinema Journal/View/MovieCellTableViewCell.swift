@@ -24,7 +24,7 @@ class MovieCellTableViewCell: UITableViewCell {
         super.awakeFromNib()
         posterImage.layer.cornerRadius = 6
         posterImage.layer.masksToBounds = true
-       
+        
         
     }
     
@@ -32,13 +32,19 @@ class MovieCellTableViewCell: UITableViewCell {
         movieTitle.text = model.title
         movieDescription.text = model.overview
         if model.voteAverage <= 0.0 {
-            movieRate.text = "No ratings yet"
+            movieRate.text = NSLocalizedString("no_ratings", comment: "")
         } else {
             movieRate.text = numberFormat(model.voteAverage)
         }
-        let year = model.releaseDate.dropLast(6)
-        yearAndGenre.text = String(year) // need to add genre in a single string
         posterImage.kf.setImage(with: URL(string: Constants.API.posterURL + model.posterPath))
+  
+        let genres = GenreController.shared.getGenreByIDs(model.genreIDS).map({
+            $0.name
+        })
+        
+        let genreString = genres.joined(separator: " | ")
+        yearAndGenre.text = (dateFormat(model.releaseDate) ?? "nil") + " | " + genreString
+        
     }
     
     
@@ -50,6 +56,17 @@ class MovieCellTableViewCell: UITableViewCell {
         return stringNum
     }
     
+    func dateFormat(_ date: String) -> String? {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        guard let actualDate = formatter.date(from: date) else {return nil}
+        let newFormatter = DateFormatter()
+        newFormatter.dateStyle = .medium
+        newFormatter.timeStyle = .none
+        let stringDate = newFormatter.string(from: actualDate)
+        return stringDate
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         
@@ -59,3 +76,5 @@ class MovieCellTableViewCell: UITableViewCell {
     
     
 }
+
+

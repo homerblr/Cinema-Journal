@@ -19,12 +19,17 @@ class ViewController: UIViewController {
         tableView.register(UINib(nibName: MovieCellTableViewCell.nibName, bundle: nil), forCellReuseIdentifier: MovieCellTableViewCell.cellIdentifier)
         tableView.estimatedRowHeight = 136
         
-        Networking.fetchData(MovieAPITarget.movies, MainData.self) { (result) in
+        
+        
+        Networking.fetchData(MovieAPITarget.movies, MainData.self) { [weak self] result in
+            guard let self = self else { return }
             switch result {
             case .success(let movieData):
                 self.results.append(contentsOf: movieData.results)
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
+                GenreController.shared.fetchGenres { (success) in
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                    }
                 }
             case .failure(let err) :
                 print(err)
@@ -35,6 +40,7 @@ class ViewController: UIViewController {
 }
 
 //-MARK: TableView extensions
+
 extension ViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return results.count
@@ -42,6 +48,8 @@ extension ViewController : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: MovieCellTableViewCell.cellIdentifier, for: indexPath) as! MovieCellTableViewCell
+        guard indexPath.row < results.count  else { fatalError("cell index out of bounds at movies tableview") }
+        
         cell.configureCell(results[indexPath.row])
         return cell
     }

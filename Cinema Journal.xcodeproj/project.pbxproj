@@ -3,13 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		24C2F9D830C19D0415F84A64 /* Pods_Cinema_Journal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 215E9EC0923C8AEB8189FC93 /* Pods_Cinema_Journal.framework */; };
 		94E9382BF16956070F5C12B0 /* Pods_Cinema_JournalTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15796DB846769B157D300612 /* Pods_Cinema_JournalTests.framework */; };
 		D641DFE9C079E747198B081D /* Pods_Cinema_Journal_Cinema_JournalUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC75029D07D0D0F60B96A748 /* Pods_Cinema_Journal_Cinema_JournalUITests.framework */; };
+		E5191094255024EE00A8E112 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E5191093255024EE00A8E112 /* Localizable.strings */; };
+		E51910A025515B7E00A8E112 /* GenreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E519109F25515B7E00A8E112 /* GenreController.swift */; };
 		E54BA6DD25403E76008112F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54BA6DC25403E76008112F3 /* AppDelegate.swift */; };
 		E54BA6DF25403E76008112F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54BA6DE25403E76008112F3 /* SceneDelegate.swift */; };
 		E54BA6E125403E76008112F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54BA6E025403E76008112F3 /* ViewController.swift */; };
@@ -57,6 +59,8 @@
 		5BD2A55F4E6D3848F2C0E057 /* Pods-Cinema Journal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cinema Journal.debug.xcconfig"; path = "Target Support Files/Pods-Cinema Journal/Pods-Cinema Journal.debug.xcconfig"; sourceTree = "<group>"; };
 		AA3405177D8512B89C60F000 /* Pods-Cinema Journal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cinema Journal.release.xcconfig"; path = "Target Support Files/Pods-Cinema Journal/Pods-Cinema Journal.release.xcconfig"; sourceTree = "<group>"; };
 		C6CDE9AA08C056DEF198DC78 /* Pods-Cinema JournalTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cinema JournalTests.release.xcconfig"; path = "Target Support Files/Pods-Cinema JournalTests/Pods-Cinema JournalTests.release.xcconfig"; sourceTree = "<group>"; };
+		E5191093255024EE00A8E112 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		E519109F25515B7E00A8E112 /* GenreController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreController.swift; sourceTree = "<group>"; };
 		E54BA6D925403E76008112F3 /* Cinema Journal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cinema Journal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E54BA6DC25403E76008112F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E54BA6DE25403E76008112F3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +143,7 @@
 		E54BA6D025403E76008112F3 = {
 			isa = PBXGroup;
 			children = (
+				E5191093255024EE00A8E112 /* Localizable.strings */,
 				E54BA6DB25403E76008112F3 /* Cinema Journal */,
 				E54BA6F525403E7A008112F3 /* Cinema JournalTests */,
 				E54BA70025403E7A008112F3 /* Cinema JournalUITests */,
@@ -164,8 +169,8 @@
 				E54BA6DC25403E76008112F3 /* AppDelegate.swift */,
 				E54BA6DE25403E76008112F3 /* SceneDelegate.swift */,
 				E577590425407676009D9C40 /* Model */,
-				E57758FE2540764E009D9C40 /* View */,
 				E57758FF2540765A009D9C40 /* Controller */,
+				E57758FE2540764E009D9C40 /* View */,
 				E54BA6E825403E79008112F3 /* Assets.xcassets */,
 				E54BA6EA25403E79008112F3 /* LaunchScreen.storyboard */,
 				E54BA6ED25403E79008112F3 /* Info.plist */,
@@ -220,6 +225,7 @@
 				E55361752540AE36000539F7 /* MainData.swift */,
 				E55361822541D0A9000539F7 /* API.swift */,
 				E553617D2541C6FD000539F7 /* TVShowsResponse.swift */,
+				E519109F25515B7E00A8E112 /* GenreController.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -341,6 +347,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5191094255024EE00A8E112 /* Localizable.strings in Resources */,
 				E54BA6EC25403E79008112F3 /* LaunchScreen.storyboard in Resources */,
 				E54BA6E925403E79008112F3 /* Assets.xcassets in Resources */,
 				E586E44425483AE700926804 /* MovieCellTableViewCell.xib in Resources */,
@@ -481,6 +488,7 @@
 				E54BA6DD25403E76008112F3 /* AppDelegate.swift in Sources */,
 				E55361762540AE36000539F7 /* MainData.swift in Sources */,
 				E54BA6E725403E76008112F3 /* Cinema_Journal.xcdatamodeld in Sources */,
+				E51910A025515B7E00A8E112 /* GenreController.swift in Sources */,
 				E553617E2541C6FD000539F7 /* TVShowsResponse.swift in Sources */,
 				E54BA6DF25403E76008112F3 /* SceneDelegate.swift in Sources */,
 				E55361832541D0A9000539F7 /* API.swift in Sources */,
