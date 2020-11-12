@@ -24,8 +24,7 @@ class detailMovieVC: UIViewController {
         super.viewDidLoad()
         
         self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
-        // Do any additional setup after loading the view.
-        
+        navigationItem.title = movieTitle.text
     }
     
 
