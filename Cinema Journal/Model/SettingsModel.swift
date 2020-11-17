@@ -11,6 +11,6 @@ struct SettingsModel {
     var adult : Bool = false    
     let sections = [
         [NSLocalizedString("settings_adult", comment: "")],
-        [NSLocalizedString("settings_aboutMe", comment: ""), NSLocalizedString("settings_hireMe", comment: "")]
+        [NSLocalizedString("settings_about_me", comment: ""), NSLocalizedString("settings_hire_me", comment: "")]
     ]
 }
