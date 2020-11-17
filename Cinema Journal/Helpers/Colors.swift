@@ -16,6 +16,10 @@ extension UIColor {
     @nonobjc class var tabBarTintColor: UIColor {
       return UIColor(named: "tabBarTint")!
     }
+    
+    @nonobjc class var textColor: UIColor {
+        return UIColor(named: "textColor")!
+      }
 
 }
 

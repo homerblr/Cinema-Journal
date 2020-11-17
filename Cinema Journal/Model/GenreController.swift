@@ -18,6 +18,7 @@ final class GenreController {
             case .success(let genreData):
                 self.genres = genreData.genres
                 completionHandler(true)
+                
             case .failure(let err):
                 completionHandler(false)
                 print(err)

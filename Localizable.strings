@@ -8,4 +8,7 @@
 "no_ratings" = "No ratings yet";
 "network_error_title" = "Network error";
 "fetch_failure" = "There was a problem with your internet connection, check network condition";
-
+"about_developer" = "About Developer";
+"settings_adult" = "Adult";
+"settings_hire_me" = "Hire Me";
+"settings_about_me" = "About me";
