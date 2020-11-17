@@ -32,6 +32,7 @@
 		E5E915622545998D00EAA6BA /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E915612545998D00EAA6BA /* SettingsVC.swift */; };
 		E5E9156A25459B0800EAA6BA /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E9156925459B0800EAA6BA /* TabBarController.swift */; };
 		E5F02BD9255AD73300A7ADF2 /* detailMovieVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F02BD8255AD73300A7ADF2 /* detailMovieVC.swift */; };
+		E5F02BE4255DB25D00A7ADF2 /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F02BE3255DB25B00A7ADF2 /* SettingsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 		E5E915612545998D00EAA6BA /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsVC.swift; path = "Cinema Journal/Controller/SettingsVC.swift"; sourceTree = SOURCE_ROOT; };
 		E5E9156925459B0800EAA6BA /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TabBarController.swift; path = "Cinema Journal/Controller/TabBarController.swift"; sourceTree = SOURCE_ROOT; };
 		E5F02BD8255AD73300A7ADF2 /* detailMovieVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = detailMovieVC.swift; path = "Cinema Journal/View/detailMovieVC.swift"; sourceTree = SOURCE_ROOT; };
+		E5F02BE3255DB25B00A7ADF2 /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
 		EC75029D07D0D0F60B96A748 /* Pods_Cinema_Journal_Cinema_JournalUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cinema_Journal_Cinema_JournalUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -229,6 +231,7 @@
 				E55361822541D0A9000539F7 /* API.swift */,
 				E553617D2541C6FD000539F7 /* TVShowsResponse.swift */,
 				E519109F25515B7E00A8E112 /* GenreController.swift */,
+				E5F02BE3255DB25B00A7ADF2 /* SettingsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -482,6 +485,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5F02BE4255DB25D00A7ADF2 /* SettingsModel.swift in Sources */,
 				E586E44325483AE700926804 /* MovieCellTableViewCell.swift in Sources */,
 				E54BA6E125403E76008112F3 /* ViewController.swift in Sources */,
 				E55E0D762549F2B900F64F8B /* Colors.swift in Sources */,

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZZ0-6S-hWa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gRB-bS-Nd9">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -16,14 +16,43 @@
                     <view key="view" contentMode="scaleToFill" id="M7X-bz-0PE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="OHz-uV-g3c">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="checkmark" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="settingsCell" id="9hr-5f-RYT">
+                                        <rect key="frame" x="20" y="55.5" width="374" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9hr-5f-RYT" id="8XT-n5-MKl">
+                                            <rect key="frame" x="0.0" y="0.0" width="330" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="pMQ-Yo-xh2" id="ryg-pb-nnD"/>
+                                    <outlet property="delegate" destination="pMQ-Yo-xh2" id="4pE-dd-Tb9"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="2cy-Wm-Jf0"/>
                         <color key="backgroundColor" name="backgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="OHz-uV-g3c" firstAttribute="top" secondItem="2cy-Wm-Jf0" secondAttribute="top" id="Ahs-59-7nf"/>
+                            <constraint firstItem="OHz-uV-g3c" firstAttribute="trailing" secondItem="2cy-Wm-Jf0" secondAttribute="trailing" id="TS1-C3-DjW"/>
+                            <constraint firstItem="OHz-uV-g3c" firstAttribute="leading" secondItem="2cy-Wm-Jf0" secondAttribute="leading" id="Ytz-Wm-Jyf"/>
+                            <constraint firstItem="OHz-uV-g3c" firstAttribute="bottom" secondItem="2cy-Wm-Jf0" secondAttribute="bottom" id="aNv-Pv-fvj"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Settings" id="1YF-SZ-BZE"/>
+                    <navigationItem key="navigationItem" title="Settings" largeTitleDisplayMode="always" id="1YF-SZ-BZE"/>
+                    <connections>
+                        <outlet property="tableView" destination="OHz-uV-g3c" id="ofQ-7q-JDr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VWA-fp-bQ0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2067" y="526"/>
+            <point key="canvasLocation" x="2066.666666666667" y="525.66964285714289"/>
         </scene>
         <!--Movies-->
         <scene sceneID="NGH-RK-f33">
@@ -106,6 +135,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="udR-QK-mfx">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.9488552213" green="0.94870942830000005" blue="0.96930819749999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -208,11 +238,11 @@
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ZC-ta-2eB" userLabel="description">
                                                 <rect key="frame" x="16" y="217" width="382" height="501.5"/>
-                                                <mutableString key="text">Sacha Baron Cohen’s filmed-in-secret Borat sequel, Borat Subsequent Moviefilm, is faced with over-the-odds challenges compared to your average belated comedy. Cohen has had to contend with not only how the comedy landscape has shifted away from shock humour in the 14 years since the original’s release, but also how reality has become such a flagrant farce that satire can scarcely seem to compete. But this follow-up largely feels like a curative for the current moment, a witty and characteristically daring slice of cinematic catharsis for a world bearing the scars of a year that surely nobody will ever forget.
+                                                <string key="text">Sacha Baron Cohen’s filmed-in-secret Borat sequel, Borat Subsequent Moviefilm, is faced with over-the-odds challenges compared to your average belated comedy. Cohen has had to contend with not only how the comedy landscape has shifted away from shock humour in the 14 years since the original’s release, but also how reality has become such a flagrant farce that satire can scarcely seem to compete. But this follow-up largely feels like a curative for the current moment, a witty and characteristically daring slice of cinematic catharsis for a world bearing the scars of a year that surely nobody will ever forget.
 
 Since the release of the first film, Kazakh reporter Borat Sagdiyev (Cohen) has been imprisoned in a gulag for dragging his country’s rep through the mud. But Borat is granted his release on one condition; he travel to America once more to gift Jonny the Monkey – literally a beloved Kazakh monkey named Jonny – to VP Mike Pence in person. That plan quickly goes kaput, though, and so Borat resigns to offering up his 15-year-old daughter, Tutar (Maria Bakalova), instead.
 
-This sequel is effectively an exercise in Cohen and director Jason Woliner finding ways to either sidestep the movie’s inherent creative hurdles, or ingeniously incorporate them. For example, Borat acknowledges early on that the average American may well recognise him in 2020, and so he spends lengthy portions of the film donning a series of ridiculous disguises, while also using Tutar as a ringer of-sorts to keep his interview subjects off an even keel.</mutableString>
+This sequel is effectively an exercise in Cohen and director Jason Woliner finding ways to either sidestep the movie’s inherent creative hurdles, or ingeniously incorporate them. For example, Borat acknowledges early on that the average American may well recognise him in 2020, and so he spends lengthy portions of the film donning a series of ridiculous disguises, while also using Tutar as a ringer of-sorts to keep his interview subjects off an even keel.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="textColor" name="textColor"/>
                                                 <nil key="highlightedColor"/>
