@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gRB-bS-Nd9">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -14,7 +13,7 @@
             <objects>
                 <viewController id="pMQ-Yo-xh2" customClass="SettingsVC" customModule="Cinema_Journal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="M7X-bz-0PE">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="OHz-uV-g3c">
@@ -59,11 +58,11 @@
             <objects>
                 <viewController id="yMP-sJ-tLZ" customClass="ViewController" customModule="Cinema_Journal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="odS-X6-d8d">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3Uc-Ux-T1a">
-                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
+                                <rect key="frame" x="0.0" y="96" width="600" height="455"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="yMP-sJ-tLZ" id="Xfv-PD-ITi"/>
@@ -149,19 +148,19 @@
         <!--Detail MovieVC-->
         <scene sceneID="vIa-gf-xU2">
             <objects>
-                <viewController id="CuN-OC-MXM" customClass="detailMovieVC" customModule="Cinema_Journal" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="CuN-OC-MXM" customClass="DetailMovieVC" customModule="Cinema_Journal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Nhy-SJ-Cqz">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pac-ee-Fb8">
-                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="44" width="600" height="556"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xA3-hs-3Ya" userLabel="contentView">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="674.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ehc-nS-uZJ" userLabel="posterAndDetails">
-                                                <rect key="frame" x="16" y="0.0" width="382" height="142"/>
+                                                <rect key="frame" x="16" y="0.0" width="568" height="142"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="poster" translatesAutoresizingMaskIntoConstraints="NO" id="1GV-0g-zaO">
                                                         <rect key="frame" x="0.0" y="8" width="88" height="127"/>
@@ -171,31 +170,31 @@
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Borat Subsequent Moviefilm " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BsO-eZ-E5t">
-                                                        <rect key="frame" x="104" y="14" width="262" height="19.5"/>
+                                                        <rect key="frame" x="104" y="14" width="448" height="19.5"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                                         <color key="textColor" name="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rej-u6-p1O">
-                                                        <rect key="frame" x="104" y="37.5" width="262" height="17"/>
+                                                        <rect key="frame" x="104" y="37.5" width="448" height="17"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <color key="textColor" name="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Comedy" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F9m-g7-dVN">
-                                                        <rect key="frame" x="104" y="66.5" width="262" height="16"/>
+                                                        <rect key="frame" x="104" y="66.5" width="448" height="16"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                         <color key="textColor" name="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" text="USA, Great Britain, 1h 57m" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Brk-rX-GWQ">
-                                                        <rect key="frame" x="104" y="83.5" width="262" height="24.5"/>
+                                                        <rect key="frame" x="104" y="83.5" width="448" height="24.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <color key="textColor" name="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6,9" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QE6-Wd-9Ve">
-                                                        <rect key="frame" x="127" y="115" width="239" height="17"/>
+                                                        <rect key="frame" x="127" y="115" width="425" height="17"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -231,13 +230,13 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18+" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wip-En-iQe" userLabel="18plus">
-                                                <rect key="frame" x="16" y="149" width="382" height="14.5"/>
+                                                <rect key="frame" x="16" y="149" width="568" height="14.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
                                                 <color key="textColor" name="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ZC-ta-2eB" userLabel="description">
-                                                <rect key="frame" x="16" y="217" width="382" height="501.5"/>
+                                                <rect key="frame" x="16" y="217" width="568" height="368"/>
                                                 <string key="text">Sacha Baron Cohen’s filmed-in-secret Borat sequel, Borat Subsequent Moviefilm, is faced with over-the-odds challenges compared to your average belated comedy. Cohen has had to contend with not only how the comedy landscape has shifted away from shock humour in the 14 years since the original’s release, but also how reality has become such a flagrant farce that satire can scarcely seem to compete. But this follow-up largely feels like a curative for the current moment, a witty and characteristically daring slice of cinematic catharsis for a world bearing the scars of a year that surely nobody will ever forget.
 
 Since the release of the first film, Kazakh reporter Borat Sagdiyev (Cohen) has been imprisoned in a gulag for dragging his country’s rep through the mud. But Borat is granted his release on one condition; he travel to America once more to gift Jonny the Monkey – literally a beloved Kazakh monkey named Jonny – to VP Mike Pence in person. That plan quickly goes kaput, though, and so Borat resigns to offering up his 15-year-old daughter, Tutar (Maria Bakalova), instead.
@@ -248,7 +247,7 @@ This sequel is effectively an exercise in Cohen and director Jason Woliner findi
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="618-lX-MRt" userLabel="seperator">
-                                                <rect key="frame" x="0.0" y="172" width="414" height="1"/>
+                                                <rect key="frame" x="0.0" y="172" width="600" height="1"/>
                                                 <color key="backgroundColor" red="0.59215686274509804" green="0.59215686274509804" blue="0.59215686274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="fDi-Sl-Pdj"/>
@@ -258,7 +257,7 @@ This sequel is effectively an exercise in Cohen and director Jason Woliner findi
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Synopsis" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Tm-oQ-Ygb" userLabel="synopsis">
-                                                <rect key="frame" x="16" y="188.5" width="382" height="19.5"/>
+                                                <rect key="frame" x="16" y="188.5" width="568" height="19.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                                 <color key="textColor" name="textColor"/>
                                                 <nil key="highlightedColor"/>

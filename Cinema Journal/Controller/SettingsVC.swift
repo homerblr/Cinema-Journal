@@ -19,6 +19,7 @@ class SettingsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         settingsModel.adult = defaults.bool(forKey: defaultsKey)
+        print(defaults.bool(forKey: defaultsKey))
         tableView.contentInset.top = 22
     }
 }
@@ -28,7 +29,9 @@ class SettingsVC: UIViewController {
 extension SettingsVC : UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
+        if indexPath.section == 1 && indexPath.row == 0 {
+            UIApplication.shared.open(URL(string: Constants.settingsURLs.aboutMeURL)!, options: [:], completionHandler: nil)
+        }
     }
     
     func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
@@ -38,6 +41,7 @@ extension SettingsVC : UITableViewDelegate {
             tableView.cellForRow(at: indexPath)?.accessoryType = settingsModel.adult ? .checkmark : .none
             return nil
         }
+
         return indexPath
     }
 }

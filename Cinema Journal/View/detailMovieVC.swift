@@ -7,7 +7,7 @@
 
 import UIKit
 
-class detailMovieVC: UIViewController {
+class DetailMovieVC: UIViewController {
 
     @IBOutlet var posterImage: UIImageView!
     @IBOutlet var movieTitle: UILabel!
