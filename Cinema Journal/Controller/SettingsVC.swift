@@ -38,7 +38,6 @@ extension SettingsVC : UITableViewDelegate {
             tableView.cellForRow(at: indexPath)?.accessoryType = settingsModel.adult ? .checkmark : .none
             return nil
         }
-        tableView.reloadData()
         return indexPath
     }
 }

@@ -8,12 +8,9 @@
 import Foundation
 
 struct SettingsModel {
-    var adult : Bool = false
+    var adult : Bool = false    
     let sections = [
-    ["Adult"],
-    ["About me", "Hire me"]
+        [NSLocalizedString("settings_adult", comment: "")],
+        [NSLocalizedString("settings_aboutMe", comment: ""), NSLocalizedString("settings_hireMe", comment: "")]
     ]
-    
-    
-    
 }
