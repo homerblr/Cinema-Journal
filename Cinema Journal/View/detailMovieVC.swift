@@ -27,6 +27,7 @@ class DetailMovieVC: UIViewController {
         posterImage.layer.cornerRadius = 6
         posterImage.layer.masksToBounds = true
         self.tabBarController?.tabBar.isHidden = true
+        
     }
     
     @IBAction func backButtonPressed(_ sender: UIBarButtonItem) {
@@ -38,7 +39,7 @@ class DetailMovieVC: UIViewController {
     
     func configureModel (_ model: MovieDetails) {
         movieTitle.text = model.title
-        navigationItem.title = movieTitle.text
+        navigationItem.title = model.title
         movieDescription.text = model.overview
         if model.voteAverage <= 0.0 {
             movieRating.text = NSLocalizedString("no_ratings", comment: "")
