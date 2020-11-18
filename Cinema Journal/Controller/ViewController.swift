@@ -82,7 +82,7 @@ extension ViewController: UITableViewDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
          if segue.identifier == segueID {
              guard let destinationVC = segue.destination as? DetailMovieVC else {return}
-            let row = (sender as! NSIndexPath).row
+            guard let row = (sender as? NSIndexPath)?.row else {return}
             let model = results[row]
             DispatchQueue.main.async {
                 destinationVC.configureModel(model)

@@ -37,7 +37,7 @@ class DetailMovieVC: UIViewController {
 
     }
     
-    func configureModel (_ model: MovieDetails) {
+    func configureModel(_ model: MovieDetails) {
         movieTitle.text = model.title
         navigationItem.title = model.title
         movieDescription.text = model.overview
