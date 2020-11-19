@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gRB-bS-Nd9">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -82,6 +83,7 @@
                     <navigationItem key="navigationItem" title="Movies" id="ACF-or-uPp"/>
                     <connections>
                         <outlet property="tableView" destination="3Uc-Ux-T1a" id="0lp-GX-xF8"/>
+                        <segue destination="CuN-OC-MXM" kind="show" identifier="goToDetailMovieVC" id="Fqn-oz-FIr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JMG-8J-HS3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -92,6 +94,7 @@
         <scene sceneID="ZEJ-rh-xwW">
             <objects>
                 <tabBarController id="gRB-bS-Nd9" customClass="TabBarController" customModule="Cinema_Journal" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="dy7-RQ-ZhN"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RdQ-NO-QTr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -112,6 +115,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LdQ-ah-cSp" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Movies" image="film" catalog="system" id="KfT-wn-37R"/>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="131-yC-r57"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="cjx-M0-ogU">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -309,6 +313,9 @@ This sequel is effectively an exercise in Cohen and director Jason Woliner findi
                     <navigationItem key="navigationItem" id="PdQ-Ov-NO9">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="arrow.left" catalog="system" id="4TX-6F-RXN">
                             <color key="tintColor" name="tabBarTint"/>
+                            <connections>
+                                <action selector="backButtonPressed:" destination="CuN-OC-MXM" id="z5q-nI-oY1"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -326,31 +333,7 @@ This sequel is effectively an exercise in Cohen and director Jason Woliner findi
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aQw-rH-VB0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5234.7826086956529" y="-134.59821428571428"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="sgE-Gn-iC6">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZZ0-6S-hWa" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Hlv-EG-eMW">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" name="navigationControllerBackground"/>
-                        <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                            <color key="textColor" name="textColor"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="CuN-OC-MXM" kind="relationship" relationship="rootViewController" id="iKa-rh-oRX"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cnC-ba-oC2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4324.6376811594209" y="-134.59821428571428"/>
+            <point key="canvasLocation" x="2851" y="-123"/>
         </scene>
     </scenes>
     <resources>
@@ -360,9 +343,6 @@ This sequel is effectively an exercise in Cohen and director Jason Woliner findi
         <image name="poster" width="73" height="104"/>
         <image name="star" width="15" height="13"/>
         <namedColor name="backgroundColor">
-            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="navigationControllerBackground">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="tabBarTint">

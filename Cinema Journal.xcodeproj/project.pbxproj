@@ -217,8 +217,9 @@
 			children = (
 				E5F02BD8255AD73300A7ADF2 /* DetailMovieVC.swift */,
 				E54BA6E025403E76008112F3 /* ViewController.swift */,
-				E5E9156925459B0800EAA6BA /* TabBarController.swift */,
+				E5F02BD8255AD73300A7ADF2 /* DetailMovieVC.swift */,
 				E5E915612545998D00EAA6BA /* SettingsVC.swift */,
+				E5E9156925459B0800EAA6BA /* TabBarController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
