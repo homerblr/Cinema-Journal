@@ -35,6 +35,7 @@ class DetailMovieVC: UIViewController {
         
     }
     
+
     @IBAction func backButtonPressed(_ sender: UIBarButtonItem) {
         navigationController?.popToRootViewController(animated: true)
         self.tabBarController?.tabBar.isHidden = false
@@ -81,5 +82,6 @@ class DetailMovieVC: UIViewController {
         let stringDate = newFormatter.string(from: actualDate)
         return stringDate
     }
+
 
 }

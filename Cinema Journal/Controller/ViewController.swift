@@ -71,6 +71,7 @@ extension ViewController : UITableViewDataSource {
         return cell
     }
     
+
 }
 
 extension ViewController: UITableViewDelegate {
@@ -86,6 +87,16 @@ extension ViewController: UITableViewDelegate {
             let model = results[row]
             destinationVC.model = model
         }
+    }
+
+    //MARK: - UIAlert
+    func showAlert() {
+        let ac = UIAlertController(title: NSLocalizedString("network_error_title", comment: ""), message: NSLocalizedString("fetch_failure", comment: ""), preferredStyle: .alert)
+        let okButton = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+        ac.addAction(okButton)
+        present(ac, animated: true, completion: nil)
+
+
     }
 }
 
