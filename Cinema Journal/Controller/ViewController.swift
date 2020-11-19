@@ -78,18 +78,15 @@ extension ViewController: UITableViewDelegate {
         performSegue(withIdentifier: segueID, sender: indexPath)
         tableView.deselectRow(at: indexPath, animated: true)
     }
-
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-         if segue.identifier == segueID {
-             guard let destinationVC = segue.destination as? DetailMovieVC else {return}
+        if segue.identifier == segueID {
+            guard let destinationVC = segue.destination as? DetailMovieVC else {return}
             guard let row = (sender as? NSIndexPath)?.row else {return}
             let model = results[row]
-            DispatchQueue.main.async {
-                destinationVC.configureModel(model)
-            }
-
-         }
-     }
+            destinationVC.model = model
+        }
+    }
 }
 
 

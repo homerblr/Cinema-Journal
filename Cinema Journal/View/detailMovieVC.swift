@@ -21,12 +21,17 @@ class DetailMovieVC: UIViewController {
     @IBOutlet var movieDescription: UILabel!
     @IBOutlet var scrollView: UIScrollView!
     
+    var model: MovieDetails?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
         posterImage.layer.cornerRadius = 6
         posterImage.layer.masksToBounds = true
         self.tabBarController?.tabBar.isHidden = true
+        if let model = model {
+            configureModel(model)
+        }
         
     }
     
