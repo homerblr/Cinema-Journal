@@ -31,12 +31,11 @@ extension SettingsVC : UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
         if indexPath.section == 0 && indexPath.row == 0 {
-            SettingsModel.shared.toggleAdult()
-            SettingsModel.shared.updateAdult()
+            SettingsModel.shared.saveAdult()
             tableView.cellForRow(at: indexPath)?.accessoryType = SettingsModel.shared.adult ? .checkmark : .none
             return nil
         }
-
+        
         return indexPath
     }
 }
@@ -46,12 +45,12 @@ extension SettingsVC : UITableViewDelegate {
 extension SettingsVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return SettingsModel.shared.sections[section].count
-
+        
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return SettingsModel.shared.sections.count
-
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
