@@ -31,7 +31,7 @@ extension SettingsVC : UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
         if indexPath.section == 0 && indexPath.row == 0 {
-            SettingsModel.shared.adult = !SettingsModel.shared.adult
+            SettingsModel.shared.toggleAdult()
             SettingsModel.shared.updateAdult()
             tableView.cellForRow(at: indexPath)?.accessoryType = SettingsModel.shared.adult ? .checkmark : .none
             return nil

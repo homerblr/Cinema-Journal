@@ -23,8 +23,6 @@ class ViewController: UIViewController {
         tableView.register(UINib(nibName: MovieCellTableViewCell.nibName, bundle: nil), forCellReuseIdentifier: MovieCellTableViewCell.cellIdentifier)
         tableView.estimatedRowHeight = 136
         
-        
-        
         Networking.fetchData(MovieAPITarget.movies(isAdult: SettingsModel.shared.adult), MainData.self) { [weak self] result in
             guard let self = self else { return }
             switch result {
