@@ -25,7 +25,7 @@ class ViewController: UIViewController {
         
         
         
-        Networking.fetchData(MovieAPITarget.movies, MainData.self) { [weak self] result in
+        Networking.fetchData(MovieAPITarget.movies(isAdult: SettingsModel.shared.adult), MainData.self) { [weak self] result in
             guard let self = self else { return }
             switch result {
             case .success(let movieData):

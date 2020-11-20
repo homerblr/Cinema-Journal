@@ -28,8 +28,9 @@ extension APITarget {
 }
 
 enum MovieAPITarget {
-    case movies
+    case movies(isAdult: Bool)
     case genres
+    
 }
 
 enum TVShowsAPI {
@@ -63,6 +64,15 @@ extension MovieAPITarget: APITarget {
         case .movies: return .get
         case .genres: return .get
         }
+    }
+    
+    var queryItems : [URLQueryItem]? {
+        var queryItem : [URLQueryItem] = [URLQueryItem(name: "api_key", value: Constants.API.APIkey)]
+        switch self {
+        case .movies(let isAdult): queryItem.append(URLQueryItem(name: "include_adult", value: String(isAdult)))
+        case .genres: break
+        }
+        return queryItem
     }
 }
 
