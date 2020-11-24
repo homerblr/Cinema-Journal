@@ -13,7 +13,8 @@ struct Constants {
         static let posterURL = "https://image.tmdb.org/t/p/w600_and_h900_bestv2"
     }
     struct settingsURLs {
-        static let aboutMeURL = "https://sk.gov.by/ru/news-ru/view/takova-zhizn-dezhurnye-sutki-so-sledovatelem-sovetskogo-rosk-6090/"
+        static let aboutMeURL = "https://mkisliy.me/"
+        static let hireMeURL = "mailto:kisly93@gmail.com"
     }
     
 }
