@@ -9,7 +9,7 @@ import UIKit
 
 
 
-class ViewController: UIViewController {
+class MoviesVC: UIViewController {
     
     @IBOutlet var tableView: UITableView!
     
@@ -54,7 +54,7 @@ class ViewController: UIViewController {
 
 //-MARK: TableView extensions
 
-extension ViewController : UITableViewDataSource {
+extension MoviesVC : UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return results.count
     }
@@ -72,7 +72,7 @@ extension ViewController : UITableViewDataSource {
 
 }
 
-extension ViewController: UITableViewDelegate {
+extension MoviesVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: segueID, sender: indexPath)
         tableView.deselectRow(at: indexPath, animated: true)

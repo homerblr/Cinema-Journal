@@ -29,6 +29,7 @@ class DetailMovieVC: UIViewController {
         posterImage.layer.cornerRadius = 6
         posterImage.layer.masksToBounds = true
         self.tabBarController?.tabBar.isHidden = true
+        countryAndLength.isHidden = true //Implementation in work
         if let model = model {
             configureModel(model)
         }

@@ -14,7 +14,7 @@
 		E51910A025515B7E00A8E112 /* GenreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E519109F25515B7E00A8E112 /* GenreController.swift */; };
 		E54BA6DD25403E76008112F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54BA6DC25403E76008112F3 /* AppDelegate.swift */; };
 		E54BA6DF25403E76008112F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54BA6DE25403E76008112F3 /* SceneDelegate.swift */; };
-		E54BA6E125403E76008112F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54BA6E025403E76008112F3 /* ViewController.swift */; };
+		E54BA6E125403E76008112F3 /* MoviesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54BA6E025403E76008112F3 /* MoviesVC.swift */; };
 		E54BA6E425403E76008112F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E54BA6E225403E76008112F3 /* Main.storyboard */; };
 		E54BA6E725403E76008112F3 /* Cinema_Journal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E54BA6E525403E76008112F3 /* Cinema_Journal.xcdatamodeld */; };
 		E54BA6E925403E79008112F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E54BA6E825403E79008112F3 /* Assets.xcassets */; };
@@ -66,7 +66,7 @@
 		E54BA6D925403E76008112F3 /* Cinema Journal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cinema Journal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E54BA6DC25403E76008112F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E54BA6DE25403E76008112F3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E54BA6E025403E76008112F3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E54BA6E025403E76008112F3 /* MoviesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesVC.swift; sourceTree = "<group>"; };
 		E54BA6E325403E76008112F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E54BA6E625403E76008112F3 /* Cinema_Journal.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Cinema_Journal.xcdatamodel; sourceTree = "<group>"; };
 		E54BA6E825403E79008112F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -215,8 +215,7 @@
 		E57758FF2540765A009D9C40 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				E5F02BD8255AD73300A7ADF2 /* DetailMovieVC.swift */,
-				E54BA6E025403E76008112F3 /* ViewController.swift */,
+				E54BA6E025403E76008112F3 /* MoviesVC.swift */,
 				E5F02BD8255AD73300A7ADF2 /* DetailMovieVC.swift */,
 				E5E915612545998D00EAA6BA /* SettingsVC.swift */,
 				E5E9156925459B0800EAA6BA /* TabBarController.swift */,
@@ -488,7 +487,7 @@
 			files = (
 				E5F02BE4255DB25D00A7ADF2 /* SettingsModel.swift in Sources */,
 				E586E44325483AE700926804 /* MovieCellTableViewCell.swift in Sources */,
-				E54BA6E125403E76008112F3 /* ViewController.swift in Sources */,
+				E54BA6E125403E76008112F3 /* MoviesVC.swift in Sources */,
 				E55E0D762549F2B900F64F8B /* Colors.swift in Sources */,
 				E5775906254076A6009D9C40 /* Networking.swift in Sources */,
 				E55E0D772549F2B900F64F8B /* Constants.swift in Sources */,
